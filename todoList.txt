@@ -1,0 +1,32 @@
+### Unsplash Vue Api Road Map ###
+[] Async load error component
+[] Async load populate
+[] Loading/ isLoading component
+[] preLoader
+[] searchTerm.value to activate search or array searches (Use watch()?)
+[]
+[]
+[] 
+[]
+[]
+[]
+[]
+[]
+
+App
+|-->Header/ Navigation
+|   |-->Pre Loaded List
+|       |-->[Wallpapers, Street Photography, Abstract, Experimental, Nature, Interiors, etc.]
+|   |-->Search
+|   |-->Add search terms to list
+|
+|-->Content
+|   |-->Populate from API
+|       |-->Display Image Title?
+|       |-->Display Creator?
+|           |-->Display Profile Image?
+|       |-->Display Image
+|       |-->
+|
+|-->Footer
+|   |-->Auto populate on scroll
