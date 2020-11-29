@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+// import { ref } from 'vue';
 
 export default {
   data() {
@@ -18,11 +18,11 @@ export default {
   },
   methods: {
     doSomething() {
-      console.log(this.information);
+      console.log('You clicked me!',this.information);
     }
   },
   setup() {
-    const information = ref([]);
+    // const information = ref({data:[]});
     // populates the page with images
     async function getData() {
       // keys and urls are placed in .env - See .env_sample for details
@@ -32,7 +32,7 @@ export default {
       try {
         const res = await fetch(url);
         const information = await res.json();
-        console.log(information.data);
+        console.log('INFORMATION',information.data);
         return information;
       } catch (error) {
         console.log(error);
@@ -41,13 +41,13 @@ export default {
     }
     return {
       getData,
-      information
+      // information
     }
   },
   mounted() {
     // runs function on life cycle hook and populates page
     this.getData();
-    console.log(this.information);
+    // console.log('MOUNTED',this.information);
     // console.log(this.information)
   }
 }
