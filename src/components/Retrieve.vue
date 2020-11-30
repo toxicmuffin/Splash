@@ -17,15 +17,10 @@ export default {
     }
   },
   setup() {
-    
     // populates the page
     onMounted(() => {
       getData();
     });
-    
-    
-    
-    
     async function getData() {
       // keys and urls are placed in .env - See .env_sample for details
       // const url = (process.env.VUE_APP_ROOT_URL)+'/photos/?client_id='+(process.env.VUE_APP_KEY);
@@ -44,11 +39,13 @@ export default {
       getData,
       information
     }
-  },
-  // mounted() {
-  //   // runs function on life cycle hook and populates page
-  //   this.getData();
-  //   console.log('MOUNTED',information);
-  // }
+  }
 }
 </script>
+
+<style scoped>
+  div {
+    border: 1px green solid;
+    border-radius: 15px;
+  }
+</style>
