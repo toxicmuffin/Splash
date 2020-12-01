@@ -1,15 +1,33 @@
 <template>
   <div>
     <h2>Retrieve Component Loaded</h2>
-    <div>{{ information.data }}</div>
+    <div>{{ namingScheme1.data }}</div>
+    <Test
+      v-for="namingScheme2 in namingScheme1"
+      :key="namingScheme2.id"
+      :userName="namingScheme2.user.name"
+      :profileImage="namingScheme2.user.profile_image.small"
+      :imageDescription="namingScheme2.description"
+      :imgThumb="namingScheme2.urls.small"
+      :altDescription="namingScheme2.alt_description"
+      :likes="namingScheme2.likes"
+      :color="namingScheme2.color"
+    ></Test>
+    <div>
+
+    </div>
   </div>
 </template>
 
 <script>
 import { onMounted, ref } from 'vue';
-let information = ref([]);
+import Test from './Test'
+
+let namingScheme1 = ref([]);
 export default {
-  
+  components: {
+    Test
+  },
   data() {
     return {
       isLoading: false,
@@ -23,13 +41,12 @@ export default {
     });
     async function getData() {
       // keys and urls are placed in .env - See .env_sample for details
-      // const url = (process.env.VUE_APP_ROOT_URL)+'/photos/?client_id='+(process.env.VUE_APP_KEY);
-      const url = ('https://reqres.in/api/users?page=2');
+      const url = (process.env.VUE_APP_ROOT_URL)+'/photos/?client_id='+(process.env.VUE_APP_KEY);
       // console.log(url); /*Debug URL*/
       try {
         const res = await fetch(url);
-        information.value = await res.json();
-        return information;
+        namingScheme1.value = await res.json();
+        return namingScheme1;
       } catch (error) {
         console.log('ERROR',error);
         this.error = 'Failed to do stuff. Nothing to see here . . .'
@@ -37,7 +54,7 @@ export default {
     }
     return {
       getData,
-      information
+      namingScheme1
     }
   }
 }
