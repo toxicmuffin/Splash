@@ -5,22 +5,23 @@
 [] Icon
 [] Loading/ isLoading component/ preLoader
 [] Async load error component
-[] searchTerm.value to activate search or array searches (Use watch()?)
-[] Create a Heart Icon
-[] Figure out a mobile friendly way to overlay user name/user profile image/photo details over image
-[] Hide profile image if null
-[] Creator View
-[]
-[]
-[]
-[]
+[] Search
+[] Navigation Searchterms
+[] Hide profile details
+[] Show profile details on image hover
+[] Creator/user View
+[] Scope creep
+[] Scope creep
+[] Scope creep
+[] Scope creep
+[] Scope creep
 
 App
 |-->Header/ Navigation
 |   |-->Pre Loaded List
 |       |-->[Wallpapers, Street Photography, Abstract, Experimental, Nature, Interiors, etc.]
 |   |-->Search
-|   |-->Add search terms to list
+|   |-->Add search terms to list?(local storage)
 |
 |-->Content
 |   |-->Populate from API
