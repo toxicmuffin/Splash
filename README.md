@@ -1,12 +1,12 @@
-#Unsplash - Vue Project
+# Unsplash - Vue Project
 A personal project using the Unsplash API. 
 
 ![Screen Shot](./readMeAssets/Screenshot01.png)
 
-##Prerequisites
+## Prerequisites
 Incorporates [Native Masonry Layout in CSS Grid](https://css-tricks.com/native-css-masonry-layout-in-css-grid/) with [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/).
 
-##Getting Started
+## Getting Started
 ```
 Create a .env.local file in the root directory
 
@@ -16,11 +16,11 @@ VUE_APP_ROOT_URL=https://api.unsplash.com/
 
 VUE_APP_ROOT_Key=YOUR-API-KEY-HERE
 ```
-#Installing
+# Installing
 ```
 npm install
 ```
-#Running
+# Running
 ```
 npm run serve
 ```
