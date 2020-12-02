@@ -1,10 +1,14 @@
-### Unsplash Vue Api Road Map ###
+Unsplash Vue Api Road Map
+
+##Basic API
 [x]Set up API
 [x]Async load populate
+##Design
 [] Style Tile (Fonts, Textures, Colors, Adjectives, Buttons)
 [] Icon
+##App
 [] Loading/ isLoading component/ preLoader
-[] Async load error component
+[] Error component
 [] Search
 [] Navigation Searchterms
 [] Hide profile details
