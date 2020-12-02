@@ -1,18 +1,18 @@
 <template>
   <div>
     <Navigation />
-    <Colonize />
+    <Retrieve />
   </div>
 </template>
 
 <script>
 import Navigation from './Navigation.vue'
-import Colonize from './Colonize.vue'
+import Retrieve from './Retrieve.vue'
 
 export default {
   components: {
     Navigation,
-    Colonize
+    Retrieve
   }
 
 }

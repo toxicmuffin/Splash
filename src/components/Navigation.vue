@@ -1,11 +1,6 @@
 <template>
-  <div>
-    <h2>Navigation Component Loaded </h2>
+  <div class="header">
+    <ul class="nav-holder">
+    </ul>
   </div>
 </template>
-
-<style scoped>
-  div {
-    border: 1px orange solid;
-  }
-</style>

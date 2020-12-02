@@ -6,10 +6,10 @@
 [] Loading/ isLoading component/ preLoader
 [] Async load error component
 [] searchTerm.value to activate search or array searches (Use watch()?)
-[]
+[] Create a Heart Icon
 [] Figure out a mobile friendly way to overlay user name/user profile image/photo details over image
-[] 
-[]
+[] Hide profile image if null
+[] Creator View
 []
 []
 []

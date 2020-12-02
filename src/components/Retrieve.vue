@@ -1,32 +1,26 @@
 <template>
-  <div>
-    <h2>Retrieve Component Loaded</h2>
-    <div>{{ namingScheme1.data }}</div>
-    <Test
+  <div class="card-holder">
+    <CardLayout
+      class="cards"
       v-for="namingScheme2 in namingScheme1"
       :key="namingScheme2.id"
       :userName="namingScheme2.user.name"
       :profileImage="namingScheme2.user.profile_image.small"
-      :imageDescription="namingScheme2.description"
+      :profileUrl="namingScheme2.links.self"
       :imgThumb="namingScheme2.urls.small"
       :altDescription="namingScheme2.alt_description"
-      :likes="namingScheme2.likes"
-      :color="namingScheme2.color"
-    ></Test>
-    <div>
-
-    </div>
+    />
   </div>
 </template>
 
 <script>
 import { onMounted, ref } from 'vue';
-import Test from './Test'
+import CardLayout from './CardLayout'
 
 let namingScheme1 = ref([]);
 export default {
   components: {
-    Test
+    CardLayout
   },
   data() {
     return {
@@ -60,9 +54,30 @@ export default {
 }
 </script>
 
-<style scoped>
-  div {
-    border: 1px green solid;
-    border-radius: 15px;
+<style>
+  .card-holder {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 70%;
+    display: grid;
+  }
+  .cards {
+    width: 100%;
+    transition: .3s ease-in-out;
+  }
+  @media only screen and (min-width: 800px) {
+  .card-holder{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: masonry;
+    justify-content: center;
+  }
+  .cards {
+    margin: 5px;
+    width: 400px;
+    filter: grayscale(100%);
+  }
+  .cards:hover {
+    filter: grayscale(0);
+  }
   }
 </style>
